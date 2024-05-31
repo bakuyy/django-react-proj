@@ -1,0 +1,20 @@
+Json Web Tokens -- acts as permissions/auth everytime we access a website
+
+Frontend
+
+
+Backend
+- needs to know who we are 
+- permissions we have
+
+
+Front end communicates to backend by sending requests. Backend returns a response. 
+
+1. Get access to JWT Tokens- 
+When authenticated- granted access token (requests), refresh token (refresh token) -- front end stores this to use this for future requests so you don't have to reauthenticate
+
+When expire: frontend submits refresh token on the backend, backend validates refresh token and then sends back an access token
+
+1. create user
+2. store user
+3. use credentials to login and access access Tokens
