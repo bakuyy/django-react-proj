@@ -9,7 +9,7 @@ function Form({route, method}) {
     //method: register or logging in 
 
     const [username, setUsername] = useState("")
-    const [password, setpassWord] = useState("")
+    const [password, setPassWord] = useState("")
     const [isLoading, setIsLoading] = useState(false)
 
     const navigate = useNavigate()
@@ -27,7 +27,17 @@ function Form({route, method}) {
         value={username}
         onChange={(e)=>{setUsername(e.target.value)}}
         placeholder="Username"
-        />
+    />
+    <input
+    className="form-input"
+    type="password"
+    value={password}
+    onChange={(e)=>{setPassWord(e.target.value)}}
+    placeholder="Username"
+    />
+    <button className="form-button" type="submit">
+    {name}
+    </button>
     </form>
     
 
