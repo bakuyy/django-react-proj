@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from .models import Note
 
 #creating a serializer using ORM
 #serializer: takes python object ot convert to JSON data/ vice versa
@@ -17,3 +18,9 @@ class UserSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         return user 
     #accept validated data that has passed checks from serializer, then passes into create
+
+class NoteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Note
+        fields = ["id", "title","content","created_at", "author"]
+        extra_kwargs = {"author":{"read_only":True}} #can read who the author is, cannot write the author

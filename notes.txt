@@ -1,0 +1,17 @@
+migrations:
+when starting django project, need to make new migrations 
+python manage.py makemigrations --- specificies migrations needed to be performed
+python manage.py migrate   
+
+run app:
+python manage.py runserver
+
+
+went to http://127.0.0.1:8000/api/user/register/ to make a user
+went to http://127.0.0.1:8000/api/token/ to access token
+
+make migrations:
+cd backend
+python manage.py makemigrations
+python manage.py migrate
+
