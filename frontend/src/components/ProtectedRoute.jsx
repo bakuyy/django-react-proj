@@ -1,7 +1,7 @@
 // be a wrapper for a protected route (we need an authorization token before we can access this route)
 
 import {Navigate} from "react-router-dom"
-import {jwtDecode} from "jwt-decode"
+import {jwtDecode} from "jwt-decode";
 import api from "../api"
 import {REFRESH_TOKEN, ACCESS_TOKEN} from "../constants"
 import { useState, useEffect } from "react"
